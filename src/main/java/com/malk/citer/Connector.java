@@ -91,6 +91,10 @@ class Connector extends Message {
         }
     }
 
+    private void getResultFromTable(ResultSet result){
+
+    }
+
     //close result and set to null so it can be used again
     private void closeResult(){
         try {
