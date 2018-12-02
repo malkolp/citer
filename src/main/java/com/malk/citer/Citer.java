@@ -16,6 +16,25 @@ public class Citer extends Message {
         this.dbName = dbName;
     }
 
+    //init new connection with no database
+    public Citer(String ip, String port, String username, String password){
+        msgMe();
+        msgConnect("jdbc:mysql://"+ip+":"+port);
+        connector = new Connector(ip,port,username,password);
+    }
+
+    //create new database
+    public void createDatabase(String dbName){
+        msgExecute("CREATE DATABASE "+dbName);
+        connector.createNewDatabase(dbName);
+        this.dbName = dbName;
+    }
+
+    public void deleteDatabase(String dbName){
+        msgExecute("DROP DATABASE "+dbName);
+        connector.dropDatabase(dbName);
+    }
+
     //use manual query
     public void manualExecuteQuery(String query){
         msgExecute(query);
