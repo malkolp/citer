@@ -8,6 +8,10 @@ public class Citer extends Message {
 
     private String dbName;
 
+    public static void main(String[] args){
+
+    }
+
     //init new database connection
     public Citer(String ip, String port, String dbName, String username, String password){
         msgMe();
