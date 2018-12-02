@@ -7,6 +7,9 @@
    1. import mysql connector .jar file to project library.
    1. import citer.jar file to project library.
 ### Bug
+* can't add attributes on createTable() method.
+* can't display query result yet.
+
 ### Documentation & Tutorial
    #### Documentation
    * [visit](#) documentation page
